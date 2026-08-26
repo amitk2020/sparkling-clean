@@ -106,7 +106,9 @@
   margin: 4px auto;
   border-radius: 2px;
   background: var(--text);
-  transition: transform 180ms ease, opacity 180ms ease;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
 }
 
 .menuButton[aria-expanded="true"] span:nth-child(1) {
