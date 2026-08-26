@@ -1,16 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react';
 import Logo from './Logo'
 import styles from './Header.module.css'
 
 function Header() {
+    const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    useEffect(() => {
+        function handleScroll() {
+            setIsScrolled(window.scrollY > 24)
+        }
+
+        handleScroll()
+
+        window.addEventListener('scroll', handleScroll, { passive: true })
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     function closeMenu() {
         setIsMenuOpen(false)
     }
 
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <Logo />
 
             <button

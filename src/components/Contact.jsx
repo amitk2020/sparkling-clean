@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import Reveal from './Reveal';
 
 import styles from './Contact.module.css'
 import sharedStyles from './Shared.module.css'
@@ -37,21 +37,19 @@ function Contact() {
     }
     return (
         <section className={styles.contactSection} id="contact">
-            <div className={styles.contactIntro}>
+            <Reveal className={styles.contactIntro}>
                 <p className={sharedStyles.eyebrow}>Let’s make it sparkle</p>
-
                 <h2>
                     Ready for a little
                     <br />
                     <em>breathing room?</em>
                 </h2>
-
                 <p>
                     Tell us a little about your space and we’ll send a tailored,
                     no-pressure quote.
                 </p>
-            </div>
-            <div className={styles.formArea}>
+            </Reveal>
+            <Reveal className={styles.formArea} delay={160}>
                 {formStatus === 'success' && (
                     <p className={`${styles.formFeedback} ${styles.formSuccess}`} aria-live="polite">
                         Thank you — your quote request has been received. We’ll be in touch soon!
@@ -158,7 +156,7 @@ function Contact() {
                         {formStatus === 'sending' ? 'Sending…' : 'Request my clean'} <span>→</span>
                     </button>
                 </form>
-            </div>
+            </Reveal>
 
         </section>
     )

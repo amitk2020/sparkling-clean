@@ -1,29 +1,90 @@
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 24px 8%;
   background: #e9f0dd;
+  transition:
+    padding 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.header.scrolled {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background: rgba(233, 240, 221, 0.92);
+  box-shadow: 0 8px 24px rgba(22, 62, 50, 0.09);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 34px;
 }
 
 .navigation a {
+  position: relative;
+  padding: 10px 2px;
   color: #163e32;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
   text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.navigation a:not(.navButton)::after {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  left: 0;
+  height: 2px;
+  content: "";
+  background: #db795e;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 180ms ease;
 }
 
 .navButton {
-  padding: 11px 17px;
+  padding: 13px 21px !important;
   border: 1px solid #116149;
   border-radius: 999px;
+  background: transparent;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease !important;
+}
+
+@media (hover: hover) {
+  .navigation a:not(.navButton):hover {
+    color: #116149;
+  }
+
+  .navigation a:not(.navButton):hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .navButton:hover {
+    color: white !important;
+    background: #116149;
+    box-shadow: 0 8px 18px rgba(17, 97, 73, 0.22);
+    transform: translateY(-2px);
+  }
+}
+
+.navigation a:focus-visible,
+.menuButton:focus-visible {
+  outline: 3px solid rgba(219, 121, 94, 0.45);
+  outline-offset: 4px;
 }
 
 .menuButton {

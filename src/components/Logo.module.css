@@ -1,17 +1,33 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 9px;
   color: #163e32;
   font-family: Georgia, serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -1.2px;
   text-decoration: none;
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease;
 }
 
 .logoMark {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   fill: #116149;
+}
+
+.brand:hover {
+  transform: translateY(-1px);
+  opacity: 0.82;
+}
+
+.light {
+  color: #fffdf8;
+}
+
+.light .logoMark {
+  fill: #dbe6aa;
 }

@@ -1,5 +1,6 @@
 import styles from './Services.module.css'
 import sharedStyles from './Shared.module.css'
+import Reveal from './Reveal';
 
 const services = [
     {
@@ -31,14 +32,19 @@ const services = [
 function Services() {
     return (
         <section className={styles.servicesSection} id="services">
-            <div className={styles.sectionHeading}>
+            <Reveal className={styles.sectionHeading}>
                 <p className={sharedStyles.eyebrow}>A clean for every season</p>
                 <h2>Small details. Big difference.</h2>
-            </div>
+            </Reveal>
 
             <div className={styles.serviceGrid}>
-                {services.map((service) => (
-                    <article className={styles.serviceCard} key={service.number}>
+                {services.map((service, index) => (
+                    <Reveal
+                        as="article"
+                        className={styles.serviceCard}
+                        delay={index * 110}
+                        key={service.number}
+                    >
                         <span className={styles.serviceNumber}>{service.number}</span>
                         <span className={styles.serviceIcon}>{service.icon}</span>
 
@@ -48,7 +54,7 @@ function Services() {
                         <a href="#contact">
                             Learn more <span>→</span>
                         </a>
-                    </article>
+                    </Reveal>
                 ))}
             </div>
         </section>

@@ -1,5 +1,6 @@
 import styles from './HowItWorks.module.css'
 import sharedStyles from './Shared.module.css'
+import Reveal from './Reveal';
 
 const steps = [
     {
@@ -25,25 +26,32 @@ const steps = [
 function HowItWorks() {
     return (
         <section className={styles.howItWorks} id="how-it-works">
-            <div className={styles.stepsIntro}>
+            <Reveal className={styles.stepsIntro}>
                 <p className={sharedStyles.eyebrow}>Easy as can be</p>
+
                 <h2>
                     Your home,
                     <br />
                     <em>our happy place.</em>
                 </h2>
-            </div>
+            </Reveal>
 
             <ol className={styles.stepsList}>
-                {steps.map((step) => (
-                    <li className={styles.step} key={step.number}>
+                {steps.map((step,index) => (
+                    <Reveal
+                        as="li"
+                        className={styles.step}
+                        delay={index * 140}
+                        key={step.number}
+                    >
                         <span className={styles.stepNumber}>{step.number}</span>
 
                         <div>
                             <h3>{step.title}</h3>
                             <p>{step.description}</p>
                         </div>
-                    </li>
+                    </Reveal>
+
                 ))}
             </ol>
         </section>

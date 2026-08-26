@@ -124,7 +124,7 @@
 
 .sparkleOne {
   top: 45px;
-  right: 45px;
+  right: 95px;
 }
 
 .sparkleTwo {
@@ -137,5 +137,103 @@
   .heroArt {
     right: -210px;
     opacity: 0.5;
+  }
+}
+.heroContent > * {
+  opacity: 0;
+  animation: heroCopyIn 3000ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.heroContent > :nth-child(1) {
+  animation-delay: 120ms;
+}
+
+.heroContent > :nth-child(2) {
+  animation-delay: 260ms;
+}
+
+.heroContent > :nth-child(3) {
+  animation-delay: 420ms;
+}
+
+.heroContent > :nth-child(4) {
+  animation-delay: 580ms;
+}
+
+.heroContent > :nth-child(5) {
+  animation-delay: 700ms;
+}
+
+.heroArt {
+  opacity: 0;
+  transform: translateX(32px) scale(0.96);
+  animation: heroArtEnter 3000ms cubic-bezier(0.16, 1, 0.3, 1) 340ms forwards;
+}
+
+.window {
+  animation: gentleFloat 7s ease-in-out 1.8s infinite;
+}
+
+.sparkleOne,
+.sparkleTwo {
+  animation: twinkle 2.8s ease-in-out 1.5s infinite;
+}
+
+.sparkleTwo {
+  animation-delay: 2.1s;
+}
+
+@keyframes heroCopyIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroArtEnter {
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.8) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15) rotate(12deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroContent > *,
+  .heroArt,
+  .window,
+  .sparkleOne,
+  .sparkleTwo {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }
