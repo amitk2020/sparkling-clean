@@ -15,8 +15,7 @@ function Hero() {
                 </h1>
 
                 <p className={styles.heroDescription}>
-                    A beautifully simple cleaning service for homes that deserve a
-                    little shine — and people who deserve their weekends back.
+                    House, oven, window, and carpet cleaning — booked in minutes, done right the first time.
                 </p>
 
                 <a className={sharedStyles.primaryButton} href="#contact">

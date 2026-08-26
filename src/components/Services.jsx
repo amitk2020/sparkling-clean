@@ -38,6 +38,23 @@ function Services() {
                 <h2>Small details. Big difference.</h2>
             </Reveal>
 
+            <div className={styles.serviceGallery} aria-label="Examples of our cleaning work">
+                {[
+                    ['https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=900&q=85', 'Home office with a tidy desk and chair'],
+                    ['https://images.unsplash.com/photo-1556909172-54557c7e4fb7?auto=format&fit=crop&w=900&q=85', 'Bright kitchen with a clean sink and counter'],
+                    ['https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85', 'Office space with big glass doors'],
+                    ['https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85', 'Freshly cleaned carpet in a living room'],
+                ].map(([src, alt], index) => (
+                    <Reveal
+                        className={styles.galleryItem}
+                        delay={index * 100}
+                        key={src}
+                    >
+                        <img src={src} alt={alt} loading="lazy" />
+                    </Reveal>
+                ))}
+            </div>
+
             <div className={styles.serviceGrid}>
                 {services.map((service, index) => (
                     <Reveal

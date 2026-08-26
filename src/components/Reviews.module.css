@@ -1,0 +1,98 @@
+.section {
+  padding: 120px 8%;
+  background: var(--surface-alt);
+}
+
+.heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 55px;
+}
+
+.heading h2 {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.heading h2 em {
+  color: var(--highlight);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.review {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 28px 26px;
+  background: var(--surface-card);
+}
+
+.quoteIcon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 20px;
+  color: var(--highlight);
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 20px;
+  color: var(--highlight);
+}
+
+.stars svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.review blockquote {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.review footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 28px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.review footer strong {
+  color: var(--text);
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .heading {
+    display: block;
+  }
+
+  .heading h2 {
+    margin-top: 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
