@@ -9,7 +9,8 @@
 </head>
 
 <body>
-  <form name="cleaning-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <form name="cleaning-request" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="cleaning-request" />
     <input type="text" name="bot-field" />
     <input type="text" name="name" />
     <input type="email" name="email" />
