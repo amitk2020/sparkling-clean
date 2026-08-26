@@ -82,7 +82,8 @@
 }
 
 .navigation a:focus-visible,
-.menuButton:focus-visible {
+.menuButton:focus-visible,
+.themeButton:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--highlight) 45%, transparent);
   outline-offset: 4px;
 }
@@ -105,6 +106,22 @@
   margin: 4px auto;
   border-radius: 2px;
   background: var(--text);
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.menuButton[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menuButton[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.menuButton[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 .themeButton {
@@ -149,7 +166,7 @@
     top: calc(100% + 8px);
     right: 16px;
     left: 16px;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 4px;
@@ -158,10 +175,22 @@
     border-radius: 14px;
     background: var(--surface-card);
     box-shadow: 0 16px 36px rgba(var(--shadow-color), 0.14);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px) scale(0.98);
+    transform-origin: top center;
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease,
+      visibility 180ms ease;
+    visibility: hidden;
   }
 
   .navigationOpen {
-    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    visibility: visible;
   }
 
   .navigation a {
@@ -180,5 +209,18 @@
     color: var(--surface) !important;
     background: var(--accent);
     text-align: center;
+  }
+
+  .themeButton {
+    align-self: center;
+    margin-top: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menuButton span,
+  .navigation,
+  .themeButton {
+    transition: none;
   }
 }
