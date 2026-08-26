@@ -1,4 +1,5 @@
 .section {
+  position: relative;
   padding: 120px 8%;
   background: var(--surface-alt);
 }
@@ -38,6 +39,16 @@
   min-height: 300px;
   padding: 28px 26px;
   background: var(--surface-card);
+  border-top: 2px solid var(--accent);
+}
+
+.review:nth-child(2) {
+  border-top-color: var(--highlight);
+  margin-top: 18px;
+}
+
+.review:nth-child(3) {
+  border-top-color: var(--text-soft);
 }
 
 .quoteIcon {
@@ -94,5 +105,9 @@
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .review:nth-child(2) {
+    margin-top: 0;
   }
 }

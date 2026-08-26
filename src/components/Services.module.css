@@ -1,9 +1,26 @@
 .servicesSection {
+  position: relative;
+  overflow: hidden;
   padding: 120px 8%;
   background: var(--surface-alt);
 }
 
+.servicesSection::after {
+  position: absolute;
+  top: 42px;
+  right: 5%;
+  color: var(--accent);
+  content: "✦  ✧  ✦\A   ✧  ✦";
+  font-size: 30px;
+  line-height: 1.5;
+  opacity: 0.12;
+  pointer-events: none;
+  white-space: pre;
+}
+
 .sectionHeading {
+  position: relative;
+  z-index: 1;
   margin-bottom: 55px;
 }
 
@@ -19,6 +36,8 @@
 }
 
 .serviceGallery {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
@@ -49,6 +68,8 @@
 }
 
 .serviceGrid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;

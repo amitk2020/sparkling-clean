@@ -1,15 +1,29 @@
 .section {
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: 90px;
-  padding: 120px 8%;
+  gap: 72px;
+  padding: 96px 8%;
   background: var(--surface);
+}
+
+.section::before {
+  position: absolute;
+  top: 28px;
+  right: 7%;
+  color: var(--highlight);
+  content: "✦";
+  font-size: 58px;
+  line-height: 1;
+  opacity: 0.09;
+  pointer-events: none;
 }
 
 .imageFrame {
   position: relative;
-  min-height: 480px;
+  min-height: 400px;
   overflow: hidden;
   background: var(--accent-soft);
 }
@@ -18,7 +32,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 480px;
+  min-height: 400px;
   object-fit: cover;
   filter: saturate(0.8);
 }
@@ -36,6 +50,8 @@
 }
 
 .content h2 {
+  position: relative;
+  z-index: 1;
   max-width: 510px;
   margin: 0 0 26px;
   color: var(--text);
@@ -81,10 +97,11 @@
   .section {
     grid-template-columns: 1fr;
     gap: 48px;
+    padding: 80px 8%;
   }
 
   .imageFrame,
   .imageFrame img {
-    min-height: 360px;
+    min-height: 320px;
   }
 }

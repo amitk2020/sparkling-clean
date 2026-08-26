@@ -20,6 +20,15 @@
   color: var(--highlight);
 }
 
+.heading::after {
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin-top: 28px;
+  content: "";
+  background: var(--highlight);
+}
+
 .list {
   border-top: 1px solid var(--border-muted);
 }
@@ -39,6 +48,14 @@
   font-size: 22px;
   cursor: pointer;
   list-style: none;
+  transition:
+    padding-left 180ms ease,
+    color 180ms ease;
+}
+
+.item summary:hover {
+  padding-left: 12px;
+  color: var(--accent);
 }
 
 .item summary::-webkit-details-marker {
