@@ -3,7 +3,7 @@
   align-items: center;
   gap: 9px;
   color: #163e32;
-  font-family: Georgia, serif;
+  font-family: var(--font-display);
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -1.2px;

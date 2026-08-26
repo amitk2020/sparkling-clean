@@ -45,7 +45,8 @@
 
 .buttonArrow {
   position: relative;
-  font-size: 22px;
+  width: 19px;
+  height: 19px;
   line-height: 1;
   transition: transform 180ms ease;
 }

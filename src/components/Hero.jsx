@@ -1,5 +1,6 @@
 import styles from './Hero.module.css'
 import sharedStyles from './Shared.module.css'
+import { ArrowRight } from 'lucide-react'
 
 function Hero() {
     return (
@@ -19,7 +20,7 @@ function Hero() {
                 </p>
 
                 <a className={sharedStyles.primaryButton} href="#contact">
-                    Get your free quote <span>→</span>
+                    Get your free quote <ArrowRight className={sharedStyles.buttonArrow} aria-hidden="true" />
                 </a>
 
                 <p className={styles.smallPrint}>

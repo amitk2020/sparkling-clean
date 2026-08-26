@@ -1,29 +1,30 @@
 import styles from './Services.module.css'
 import sharedStyles from './Shared.module.css'
 import Reveal from './Reveal';
+import { ArrowRight, BrushCleaning, CookingPot, House, PanelsTopLeft } from 'lucide-react'
 
 const services = [
     {
         number: '01',
-        icon: '✦',
+        icon: House,
         title: 'House cleaning',
         description: 'A reliable regular clean that keeps your home fresh and calm.',
     },
     {
         number: '02',
-        icon: '⌁',
+        icon: CookingPot,
         title: 'Oven cleaning',
         description: 'A detailed deep clean to bring your oven back to its best.',
     },
     {
         number: '03',
-        icon: '☼',
+        icon: PanelsTopLeft,
         title: 'Window cleaning',
         description: 'Streak-free windows that let more light into your home.',
     },
     {
         number: '04',
-        icon: '▧',
+        icon: BrushCleaning,
         title: 'Carpet cleaning',
         description: 'A thorough refresh for cleaner, softer, more comfortable carpets.',
     },
@@ -46,13 +47,15 @@ function Services() {
                         key={service.number}
                     >
                         <span className={styles.serviceNumber}>{service.number}</span>
-                        <span className={styles.serviceIcon}>{service.icon}</span>
+                        <span className={styles.serviceIcon}>
+                            <service.icon aria-hidden="true" />
+                        </span>
 
                         <h3>{service.title}</h3>
                         <p>{service.description}</p>
 
-                        <a href="#contact">
-                            Learn more <span>→</span>
+                        <a className={styles.serviceLink} href="#contact">
+                            Learn more <ArrowRight aria-hidden="true" />
                         </a>
                     </Reveal>
                 ))}

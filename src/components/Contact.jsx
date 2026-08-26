@@ -3,6 +3,7 @@ import Reveal from './Reveal';
 
 import styles from './Contact.module.css'
 import sharedStyles from './Shared.module.css'
+import { ArrowRight } from 'lucide-react'
 
 function Contact() {
 
@@ -153,7 +154,7 @@ function Contact() {
                         type="submit"
                         disabled={formStatus === 'sending'}
                     >
-                        {formStatus === 'sending' ? 'Sending…' : 'Request my clean'} <span>→</span>
+                        {formStatus === 'sending' ? 'Sending…' : 'Request my clean'} <ArrowRight className={sharedStyles.buttonArrow} aria-hidden="true" />
                     </button>
                 </form>
             </Reveal>
