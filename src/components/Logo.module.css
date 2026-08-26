@@ -1,0 +1,17 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #163e32;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.logoMark {
+  width: 20px;
+  height: 20px;
+  fill: #116149;
+}

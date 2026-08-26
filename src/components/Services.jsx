@@ -1,3 +1,6 @@
+import styles from './Services.module.css'
+import sharedStyles from './Shared.module.css'
+
 const services = [
     {
         number: '01',
@@ -27,17 +30,17 @@ const services = [
 
 function Services() {
     return (
-        <section className="services-section" id="services">
-            <div className="section-heading">
-                <p className="eyebrow">A clean for every season</p>
+        <section className={styles.servicesSection} id="services">
+            <div className={styles.sectionHeading}>
+                <p className={sharedStyles.eyebrow}>A clean for every season</p>
                 <h2>Small details. Big difference.</h2>
             </div>
 
-            <div className="service-grid">
+            <div className={styles.serviceGrid}>
                 {services.map((service) => (
-                    <article className="service-card" key={service.number}>
-                        <span className="service-number">{service.number}</span>
-                        <span className="service-icon">{service.icon}</span>
+                    <article className={styles.serviceCard} key={service.number}>
+                        <span className={styles.serviceNumber}>{service.number}</span>
+                        <span className={styles.serviceIcon}>{service.icon}</span>
 
                         <h3>{service.title}</h3>
                         <p>{service.description}</p>

@@ -1,0 +1,141 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+  overflow: hidden;
+  background: #e9f0dd;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #163e32;
+  font-family: Georgia, serif;
+  font-size: clamp(52px, 8vw, 96px);
+  font-weight: 500;
+  letter-spacing: -4px;
+  line-height: 0.98;
+}
+
+.hero h1 em {
+  color: #db795e;
+}
+
+.heroDescription {
+  max-width: 480px;
+  margin: 28px 0;
+  color: #587066;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.smallPrint {
+  margin-top: 15px;
+  color: #708277;
+  font-size: 12px;
+}
+
+.heroArt {
+  position: absolute;
+  right: 8%;
+  bottom: 0;
+  width: 430px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 220px 220px 0 0;
+  background: #c3d9c5;
+}
+
+.sun {
+  position: absolute;
+  top: 84px;
+  right: 65px;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  background: #f2c964;
+}
+
+.window {
+  position: absolute;
+  top: 105px;
+  right: 42px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+  width: 250px;
+  height: 310px;
+  padding: 10px;
+  border: 10px solid #fffaf0;
+}
+
+.window span {
+  background: #89b7b1;
+}
+
+.plant {
+  position: absolute;
+  bottom: -15px;
+  left: 35px;
+  width: 140px;
+  height: 160px;
+  border-radius: 50% 50% 0 0;
+  background: #e6b087;
+  clip-path: polygon(18% 100%, 82% 100%, 100% 52%, 0 52%);
+}
+
+.plant span {
+  position: absolute;
+  bottom: 70px;
+  left: 48px;
+  width: 45px;
+  height: 105px;
+  border-radius: 100% 0 100% 0;
+  background: #276452;
+  transform-origin: bottom;
+}
+
+.plant span:nth-child(2) {
+  height: 85px;
+  transform: rotate(45deg);
+}
+
+.plant span:nth-child(3) {
+  height: 95px;
+  transform: rotate(-43deg);
+}
+
+.plant span:nth-child(4) {
+  height: 130px;
+  transform: rotate(14deg);
+}
+
+.sparkle {
+  position: absolute;
+  color: #fff9dc;
+  font-size: 34px;
+}
+
+.sparkleOne {
+  top: 45px;
+  right: 45px;
+}
+
+.sparkleTwo {
+  top: 110px;
+  left: 45px;
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .heroArt {
+    right: -210px;
+    opacity: 0.5;
+  }
+}

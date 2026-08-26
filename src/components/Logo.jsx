@@ -1,8 +1,9 @@
+import styles from './Logo.module.css';
 function Logo() {
   return (
-    <a className="brand" href="#top" aria-label="Sparkling Clean home">
+    <a className={styles.brand} href="#top" aria-label="Sparkling Clean home">
       <svg
-        className="logo-mark"
+        className={styles.logoMark}
         viewBox="0 0 32 32"
         aria-hidden="true"
       >
