@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sparkling Clean | Home cleaning made easy</title>
+</head>
+
+<body>
+  <form name="cleaning-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="text" name="bot-field" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+
+    <select name="service">
+      <option>House cleaning</option>
+      <option>Oven cleaning</option>
+      <option>Window cleaning</option>
+      <option>Carpet cleaning</option>
+    </select>
+
+    <select name="homeSize">
+      <option>1–2 bedrooms</option>
+      <option>3 bedrooms</option>
+      <option>4+ bedrooms</option>
+    </select>
+
+    <textarea name="message"></textarea>
+  </form>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
