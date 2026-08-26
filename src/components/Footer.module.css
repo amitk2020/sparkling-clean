@@ -1,7 +1,7 @@
 .footer {
   padding: 56px 8% 24px;
   color: #eaf0e6;
-  background: #163e32;
+  background: var(--footer);
 }
 
 .top {

@@ -3,12 +3,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   padding: 120px 8%;
-  background: #ede5d8;
+  background: var(--surface-muted);
 }
 
 .stepsIntro h2 {
   margin: 0;
-  color: #163e32;
+  color: var(--text);
   font-family: var(--font-display);
   font-size: clamp(42px, 5vw, 70px);
   font-weight: 500;
@@ -17,7 +17,7 @@
 }
 
 .stepsIntro h2 em {
-  color: #db795e;
+  color: var(--highlight);
 }
 
 .stepsList {
@@ -31,7 +31,7 @@
   gap: 24px;
   padding-bottom: 28px;
   margin-bottom: 28px;
-  border-bottom: 1px solid #d3cabb;
+  border-bottom: 1px solid var(--border-muted);
 }
 
 .stepNumber {
@@ -42,14 +42,14 @@
   place-items: center;
   border-radius: 50%;
   color: white;
-  background: #116149;
+  background: var(--accent);
   font-size: 12px;
   font-weight: 700;
 }
 
 .step h3 {
   margin: 1px 0 9px;
-  color: #163e32;
+  color: var(--text);
   font-family: var(--font-display);
   font-size: 24px;
   font-weight: 500;
@@ -58,7 +58,7 @@
 .step p {
   max-width: 380px;
   margin: 0;
-  color: #587066;
+  color: var(--text-muted);
   font-size: 14px;
   line-height: 1.6;
 }

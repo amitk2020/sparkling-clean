@@ -4,7 +4,7 @@
   align-items: center;
   padding: 80px 8%;
   overflow: hidden;
-  background: #e9f0dd;
+  background: var(--accent-soft);
 }
 
 .heroContent {
@@ -15,7 +15,7 @@
 
 .hero h1 {
   margin: 0;
-  color: #163e32;
+  color: var(--text);
   font-family: var(--font-display);
   font-size: clamp(52px, 8vw, 96px);
   font-weight: 500;
@@ -24,20 +24,20 @@
 }
 
 .hero h1 em {
-  color: #db795e;
+  color: var(--highlight);
 }
 
 .heroDescription {
   max-width: 480px;
   margin: 28px 0;
-  color: #587066;
+  color: var(--text-muted);
   font-size: 17px;
   line-height: 1.6;
 }
 
 .smallPrint {
   margin-top: 15px;
-  color: #708277;
+  color: var(--text-soft);
   font-size: 12px;
 }
 

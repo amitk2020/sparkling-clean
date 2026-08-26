@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px 8%;
-  background: #e9f0dd;
+  background: var(--accent-soft);
   transition:
     padding 220ms ease,
     background 220ms ease,
@@ -16,8 +16,8 @@
 .header.scrolled {
   padding-top: 14px;
   padding-bottom: 14px;
-  background: rgba(233, 240, 221, 0.92);
-  box-shadow: 0 8px 24px rgba(22, 62, 50, 0.09);
+  background: color-mix(in srgb, var(--accent-soft) 92%, transparent);
+  box-shadow: 0 8px 24px rgba(var(--shadow-color), 0.09);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -31,7 +31,7 @@
 .navigation a {
   position: relative;
   padding: 10px 2px;
-  color: #163e32;
+  color: var(--text);
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
@@ -45,7 +45,7 @@
   left: 0;
   height: 2px;
   content: "";
-  background: #db795e;
+  background: var(--highlight);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 180ms ease;
@@ -53,7 +53,7 @@
 
 .navButton {
   padding: 13px 21px !important;
-  border: 1px solid #116149;
+  border: 1px solid var(--accent);
   border-radius: 999px;
   background: transparent;
   transition:
@@ -65,7 +65,7 @@
 
 @media (hover: hover) {
   .navigation a:not(.navButton):hover {
-    color: #116149;
+    color: var(--accent);
   }
 
   .navigation a:not(.navButton):hover::after {
@@ -74,16 +74,16 @@
   }
 
   .navButton:hover {
-    color: white !important;
-    background: #116149;
-    box-shadow: 0 8px 18px rgba(17, 97, 73, 0.22);
+    color: var(--surface) !important;
+    background: var(--accent);
+    box-shadow: 0 8px 18px rgba(var(--shadow-color), 0.22);
     transform: translateY(-2px);
   }
 }
 
 .navigation a:focus-visible,
 .menuButton:focus-visible {
-  outline: 3px solid rgba(219, 121, 94, 0.45);
+  outline: 3px solid color-mix(in srgb, var(--highlight) 45%, transparent);
   outline-offset: 4px;
 }
 
@@ -92,7 +92,7 @@
   width: 44px;
   height: 44px;
   padding: 10px;
-  border: 1px solid #116149;
+  border: 1px solid var(--accent);
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
@@ -104,7 +104,35 @@
   height: 2px;
   margin: 4px auto;
   border-radius: 2px;
-  background: #163e32;
+  background: var(--text);
+}
+
+.themeButton {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.themeButton svg {
+  width: 18px;
+  height: 18px;
+}
+
+.themeButton:hover {
+  color: var(--surface);
+  background: var(--accent);
+  transform: rotate(12deg);
 }
 
 @media (max-width: 760px) {
@@ -126,10 +154,10 @@
     align-items: stretch;
     gap: 4px;
     padding: 12px;
-    border: 1px solid #d8ded1;
+    border: 1px solid var(--border);
     border-radius: 14px;
-    background: #fffdf8;
-    box-shadow: 0 16px 36px rgba(22, 62, 50, 0.14);
+    background: var(--surface-card);
+    box-shadow: 0 16px 36px rgba(var(--shadow-color), 0.14);
   }
 
   .navigationOpen {
@@ -143,14 +171,14 @@
   }
 
   .navigation a:hover {
-    background: #edf3df;
+    background: var(--accent-soft);
   }
 
   .navButton {
     margin-top: 4px;
     border: 0;
-    color: white !important;
-    background: #116149;
+    color: var(--surface) !important;
+    background: var(--accent);
     text-align: center;
   }
 }

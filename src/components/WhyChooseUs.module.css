@@ -3,13 +3,13 @@
   grid-template-columns: 0.8fr 1.2fr;
   gap: 90px;
   padding: 120px 8%;
-  background: #f8f5ee;
+  background: var(--surface-alt);
 }
 
 .intro h2 {
   max-width: 430px;
   margin: 0 0 24px;
-  color: #163e32;
+  color: var(--text);
   font-family: var(--font-display);
   font-size: clamp(42px, 5vw, 68px);
   font-weight: 500;
@@ -18,13 +18,13 @@
 }
 
 .intro h2 em {
-  color: #db795e;
+  color: var(--highlight);
 }
 
 .intro > p:last-child {
   max-width: 360px;
   margin: 0;
-  color: #587066;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -36,8 +36,8 @@
 
 .promise {
   padding: 28px 24px;
-  border-top: 2px solid #116149;
-  background: #fffdf8;
+  border-top: 2px solid var(--accent);
+  background: var(--surface-card);
 }
 
 .icon {
@@ -47,8 +47,8 @@
   margin-bottom: 44px;
   place-items: center;
   border-radius: 50%;
-  color: #116149;
-  background: #e9f0dd;
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .icon svg {
@@ -58,7 +58,7 @@
 
 .promise h3 {
   margin: 0 0 12px;
-  color: #163e32;
+  color: var(--text);
   font-family: var(--font-display);
   font-size: 23px;
   font-weight: 500;
@@ -67,7 +67,7 @@
 
 .promise p {
   margin: 0;
-  color: #587066;
+  color: var(--text-muted);
   font-size: 14px;
   line-height: 1.6;
 }
