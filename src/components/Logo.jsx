@@ -4,7 +4,7 @@ function Logo({ tone = 'dark' }) {
     return (
         <a
             className={`${styles.brand} ${tone === 'light' ? styles.light : ''}`}
-            href="#top"
+            href="/"
             aria-label="Sparkling Clean home"
         >
             <svg className={styles.logoMark} viewBox="0 0 32 32" aria-hidden="true">
